@@ -53,16 +53,12 @@ venv\Scripts\activate
 
 ### 3. Install Dependencies
 
-Ensure you have the `requirements.txt` file and run:
-
-```bash
-pip install -r requirements.txt
-```
+Ensure to download all the libraries used in the project
 
 ### 4. Configure the API Key
 
 - Open the `gui.py` file.
-- Replace the placeholder API key (`API_KEY = "your-api-key"`) with your actual Mistral AI API key.
+- Replace the placeholder API key (`API_KEY = "your-api-key"`) with your own Mistral AI API key.
 
 ### 5. Run the Application
 
