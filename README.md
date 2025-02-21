@@ -2,7 +2,7 @@
 
 AI Code Doctor is an AI-powered debugging and conversational assistant that helps developers quickly fix, optimize, and understand their code. It also offers an interactive chat mode where you can ask questions and receive responses in various emotional tones!
 
-**Note: ** I have added all the files i made during the project making or you can say versions of it.
+**Note:** I have added all the files i made during the project making or you can say versions of it.
 
 ## Overview
 
