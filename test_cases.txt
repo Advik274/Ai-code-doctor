@@ -1,0 +1,85 @@
+
+## 🟠 C++ Sample Code (Syntax & Logical Error)
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (n % 2 = 0) {  // ❌ Incorrect assignment operator (= instead of ==)
+        cout << "Even number" << endl;
+    } else {
+        cout << "Odd number" << endl;
+    }
+
+    return 0;
+}
+```
+### Expected Fixes:
+- Change `if (n % 2 = 0)` to `if (n % 2 == 0)`.
+- Ensure correct indentation.
+
+---
+
+## 🔵 C Sample Code (Memory Leak & Logical Bug)
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void createArray() {
+    int *arr = (int *)malloc(5 * sizeof(int));
+    for (int i = 0; i < 5; i++) {
+        arr[i] = i * 2;
+    }
+    printf("Array created successfully!\n");
+    // ❌ Memory leak: free(arr) is missing.
+}
+
+int main() {
+    createArray();
+    return 0;
+}
+```
+### Expected Fixes:
+- Add `free(arr);` at the end of `createArray()` to prevent memory leaks.
+
+---
+
+## 🟢 Python Sample Code (Syntax & Performance Issue)
+```python
+def factorial(n):
+    if n = 0:  # ❌ Syntax Error (should be == instead of =)
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+```
+### Expected Fixes:
+- Replace `if n = 0:` with `if n == 0:`
+- Optimize by using **memoization** to avoid redundant computations.
+
+---
+
+## 🔴 Java Sample Code (Exception & Optimization Issue)
+```java
+import java.util.Scanner;
+
+public class Division {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter numerator: ");
+        int num = scanner.nextInt();
+        System.out.print("Enter denominator: ");
+        int den = scanner.nextInt();
+        
+        int result = num / den; // ❌ Runtime Error: Division by zero not handled
+        System.out.println("Result: " + result);
+    }
+}
+```
+### Expected Fixes:
+- Add a check: `if (den == 0) { System.out.println("Error: Division by zero!"); return; }`
