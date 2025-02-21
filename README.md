@@ -2,6 +2,8 @@
 
 AI Code Doctor is an AI-powered debugging and conversational assistant that helps developers quickly fix, optimize, and understand their code. It also offers an interactive chat mode where you can ask questions and receive responses in various emotional tones!
 
+**Note: ** I have added all the files i made during the project making or you can say versions of it.
+
 ## Overview
 
 This project has two primary functionalities:
@@ -57,7 +59,7 @@ Ensure to download all the libraries used in the project
 
 ### 4. Configure the API Key
 
-- Open the `gui.py` file.
+- Open the `guifinal.py` file.
 - Replace the placeholder API key (`API_KEY = "your-api-key"`) with your own Mistral AI API key.
 
 ### 5. Run the Application
