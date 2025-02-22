@@ -3,7 +3,7 @@ import requests
 import subprocess
 
 # Replace with your actual Mistral API key
-API_KEY = "iSZSe54xfHDb4ONhaKFlwls7JuTKZNER"
+API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, mode, model):
     url = "https://api.mistral.ai/v1/chat/completions"
