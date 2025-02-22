@@ -4,7 +4,7 @@ import subprocess
 import re
 
 # Replace with your actual API key
-API_KEY = "iSZSe54xfHDb4ONhaKFlwls7JuTKZNER"
+API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, fix_mode, model):
     url = "https://api.mistral.ai/v1/chat/completions"
