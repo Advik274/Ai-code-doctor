@@ -4,7 +4,7 @@ import subprocess
 import re
 
 # Replace with your actual API key
-API_KEY = "iSZSe54xfHDb4ONhaKFlwls7JuTKZNER"
+API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, mode, model):
     url = "https://api.mistral.ai/v1/chat/completions"
@@ -134,23 +134,23 @@ with gr.Blocks(css=css) as iface:
     with gr.Column(visible=True) as code_section:
         with gr.Row():
             with gr.Column(scale=2):
-                code_input = gr.Textbox(lines=16, placeholder="Paste Your Code Here:", label="Paste Your Code")
+                code_input = gr.Textbox(lines=16, placeholder="Errors in the code? \nNo problem give it to me", label="Paste Your Code")
             with gr.Column(scale=1):
                 language_dropdown = gr.Dropdown(choices=languages, label="Select Language")
                 mode_radio = gr.Radio(choices=modes, label="Select Fix Mode")
                 model_dropdown = gr.Dropdown(choices=models, label="Select AI Model")
                 fix_button = gr.Button("🛠 Fix Code", elem_id="fix_button")
-        output_box = gr.Textbox(label="AI Output (Fixed Code & Explanation)", lines=15)
+        output_box = gr.Textbox(label="AI Output", lines=15)
         with gr.Row():
             with gr.Column(scale=2):
-                corrected_code_box = gr.Textbox(label="Corrected Code", lines=16)
+                corrected_code_box = gr.Textbox(label="Corrected Code", placeholder="It will extract the code automatically from the AI Output", lines=16)
             with gr.Column(scale=1):
                 execution_output = gr.Textbox(label="Execution Output", lines=12)
                 run_button = gr.Button("▶ Run My Code", elem_id="run_button")
         fix_button.click(fix_code, inputs=[code_input, language_dropdown, mode_radio, model_dropdown],
                          outputs=[output_box, corrected_code_box])
         run_button.click(run_code, inputs=[corrected_code_box, language_dropdown], outputs=execution_output)
-    
+      
     # Chat Mode Section
     with gr.Column(visible=False) as chat_section:
         chat_input = gr.Textbox(lines=5, placeholder="Ask AI something...", label="Chat Input")
