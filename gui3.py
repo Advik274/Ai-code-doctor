@@ -2,7 +2,7 @@ import gradio as gr
 import requests
 
 # Replace with your actual Mistral API key
-API_KEY = "iSZSe54xfHDb4ONhaKFlwls7JuTKZNER"
+API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, mode):
     url = "https://api.mistral.ai/v1/chat/completions"
