@@ -4,7 +4,7 @@ import subprocess
 import re
 
 # Replace with your actual API key
-API_KEY = "iSZSe54xfHDb4ONhaKFlwls7JuTKZNER"
+API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 # Function to interact with Mistral AI
 def chat_with_mistral(user_message, chat_history):
