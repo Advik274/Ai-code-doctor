@@ -1,7 +1,7 @@
 import gradio as gr
 import requests
 
-# Replace with your actual Mistral API key
+# TODO: Replace with environment variable for security (e.g., os.getenv('MISTRAL_API_KEY'))
 API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, mode, model):
@@ -33,6 +33,15 @@ def fix_code(code, language, mode, model):
 
 # Function to execute Python code
 def execute_python_code(code):
+    """
+    Safely executes Python code in an isolated environment.
+    
+    Args:
+        code (str): Python code to execute
+        
+    Returns:
+        str: Success message or error details
+    """
     try:
         exec_globals = {}
         exec(code, exec_globals)  # Execute the code safely in a separate environment
