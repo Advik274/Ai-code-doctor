@@ -7,6 +7,18 @@ import re
 API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
 def fix_code(code, language, mode, model):
+    """
+    Fix and/or optimize the provided code using Mistral AI API.
+    
+    Args:
+        code (str): The code to be fixed/optimized
+        language (str): Programming language of the code
+        mode (str): Fix mode (errors only, optimize, or explain)
+        model (str): AI model to use for processing
+        
+    Returns:
+        tuple: (AI response text, extracted corrected code)
+    """
     url = "https://api.mistral.ai/v1/chat/completions"
     headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
@@ -70,7 +82,7 @@ with gr.Blocks(css=css) as iface:
             run_button = gr.Button("▶ Run My Code")
 
     # Run Code Button Moved Below Execution Output
-   
+
 
     fix_button.click(fix_code, inputs=[code_input, language_dropdown, mode_radio, model_dropdown], outputs=[output_box, corrected_code_box])
     run_button.click(run_python_code, inputs=[corrected_code_box], outputs=execution_output)
