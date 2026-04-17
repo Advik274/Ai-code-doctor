@@ -4,7 +4,17 @@ import requests
 # Replace with your actual Mistral API key
 API_KEY = "cRPZfgYcTSluoLwakjvemAGlzUpOYOMy"
 
-def fix_code(code, language):
+def fix_code(code: str, language: str) -> str:
+    """
+    Send code to Mistral API for fixing and explanation.
+    
+    Args:
+        code: The code to be fixed
+        language: Programming language of the code
+        
+    Returns:
+        Fixed code and explanations from the API, or error message
+    """
     url = "https://api.mistral.ai/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {API_KEY}",
